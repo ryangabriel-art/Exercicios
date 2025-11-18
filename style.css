@@ -1,0 +1,46 @@
+h3{
+    font-size: 70px;
+    text-align: center;
+}
+
+input{
+    border-radius: 15px;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+    display: block;
+    margin-left: 40%;
+    font-size: large;
+    font-weight: 600;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+button{
+    border-radius: 15px;
+    height: 30px;
+    width: 100px;
+    margin-left: 43%;
+    margin-top: 2%;
+    box-shadow: 10px 5px 30px 5px #003049;
+}
+
+ li {
+    margin-left: 40%;
+    display: inline-block;
+    list-style: none;
+    margin: 5px 10px;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 20px;
+    box-shadow:  10px 5px 30px 5px #003049;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #999;
+}
