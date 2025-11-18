@@ -1,43 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista De Tarefas</title>
-    <style>
-        li{
-            list-style: none;
-            margin: 5px 0;
-            background: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            width: 200px;
-        }
-        li.done{
-            text-decoration: line-through;
-            color: #999;
-        }
-
-    </style>
+    <link rel="stylesheet" href="lista.css">
 </head>
-<body style="background-color: black; flex-direction: column; display: flex;">
-    <h1 style="color: #fff; margin-left: 33%; font-size: 70px;">Lista De Tarefas</h1>
-        <input type="text" id="input-task" placeholder="AddTask" style="border-radius: 10px; text-align: center; height: 25px; width: 200px; margin-left: 40%;">
-            <button onclick="addTask()" style=" background-color: aliceblue; color: black; width: 150px; height: 25px; margin-left: 42%; margin-top: 2%;">AddTarefa</button>
-                <ul id="AddTask"></ul>
+<body>
+    <h3>Lista de Tarefas</h3>
+    <input type="text" id="tarefa" placeholder="Nova Tarefa">
+    <button type="submit" onclick="adicionar()">Adicionar</button>
+    <ul id="lista"></ul>
 </body>
-    <script>
-        const AddTarefa = document.getElementById("input-task");
-        const lista = document.getElementById("AddTask")
-
-        function addTask(){
-            if (!AddTarefa.value) return;
-            const li = document.createElement("li");
-            li.textContent = AddTarefa.value;
-            li.onclick = () => li.classList.toggle("done");
-            li.ondblclick = () => li.remove();
-            lista.appendChild(li);
-            AddTarefa.value = " ";
-        }
-    </script>
+<script src="lista.js" defer></script>
 </html>
